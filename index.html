@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+			crossorigin="anonymous"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+		<title>Web Charts</title>
+	</head>
+	<body>
+		<div class="m-5">
+			<div class="card col-md-6 offset-md-3">
+				<canvas id="myChart"></canvas>
+			</div>
+		</div>
+
+		<script>
+			var ctx = document.getElementById("myChart").getContext("2d");
+			var chart = new Chart(ctx, {
+				type: "line",
+				data: {
+					labels: [
+						"January",
+						"February",
+						"March",
+						"April",
+						"May",
+						"June",
+						"July",
+					],
+					datasets: [
+						{
+							label: "My First dataset",
+							backgroundColor: "rgb(255, 99, 132)",
+							borderColor: "rgb(255, 99, 132)",
+							data: [0, 10, 5, 2, 20, 30, 45],
+						},
+					],
+				},
+				options: {},
+			});
+		</script>
+	</body>
+</html>
